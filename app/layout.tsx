@@ -13,13 +13,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-white">
+      <body className="relative bg-black text-white">
+
+        {/* 🔥 Background Image */}
+        <div
+          className="fixed inset-0 -z-10 bg-cover bg-center opacity-100"
+          style={{
+            backgroundImage: "url('/image1.jpg')",
+          }}
+        />
+
+        {/* 🔥 Dark overlay for readability */}
+        <div className="fixed inset-0 -z-10 bg-black/70" />
+
         <Navbar />
 
-        {/* This is REQUIRED */}
         <main className="pt-20">
           {children}
         </main>
+
       </body>
     </html>
   );
