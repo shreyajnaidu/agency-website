@@ -17,7 +17,7 @@ export default function RootLayout({
 
         {/* 🔥 Background Image */}
         <div
-          className="fixed inset-0 -z-10 bg-cover bg-center opacity-100"
+          className="relative z-50 transition-all duration-500"
           style={{
             backgroundImage: "url('/image1.jpg')",
           }}
